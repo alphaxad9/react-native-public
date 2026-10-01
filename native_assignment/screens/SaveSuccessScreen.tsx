@@ -11,6 +11,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
+
 // Types & Constants
 import { NewInspectionStackParamList, MainTabParamList } from '../types/navigation';
 import { COLORS } from '../constants/colors';
@@ -135,6 +136,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '700',
   },
+  
   secondaryButton: {
     flexDirection: 'row',
     alignItems: 'center',
