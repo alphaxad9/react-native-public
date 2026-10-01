@@ -7,13 +7,16 @@ import {
   ScrollView,
   SafeAreaView,
 } from 'react-native';
+
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
+
 // Types & Constants
 import { RecordsStackParamList } from '../types/navigation';
 import { COLORS } from '../constants/colors';
+
 
 // Context & Components
 import { useInspections } from '../context/InspectionContext';
@@ -21,9 +24,11 @@ import AppHeader from '../components/AppHeader';
 import InspectionSummary from '../components/InspectionSummary';
 import EmptyState from '../components/EmptyState';
 
+
 // Explicitly type the route and navigation props
 type RouteProps = RouteProp<RecordsStackParamList, 'InspectionDetails'>;
 type NavigationProp = NativeStackNavigationProp<RecordsStackParamList, 'InspectionDetails'>;
+
 
 export default function InspectionDetailsScreen() {
   const route = useRoute<RouteProps>();
@@ -33,9 +38,11 @@ export default function InspectionDetailsScreen() {
   // Extract the inspectionId passed from the Records screen
   const { inspectionId } = route.params;
 
+
   // Fetch the real saved inspection data from context
   const inspection = getInspectionById(inspectionId);
 
+  
   const handleBack = () => {
     navigation.goBack();
   };
