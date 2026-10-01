@@ -6,7 +6,9 @@ import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
 
+
 import AppHeader from '../components/AppHeader';
+
 import MarketCard from '../components/MarketCard';
 import EmptyState from '../components/EmptyState';
 import { MOCK_MARKET_ZONES } from '../data/marketZones';
