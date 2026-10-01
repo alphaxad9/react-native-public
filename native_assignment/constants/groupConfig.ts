@@ -2,6 +2,6 @@
 export const GROUP_CONFIG = {
   groupNumber: '04',
   leaderRegLast4: '1234',
-  verificationCode: 'MOB-A1-G06', 
+  verificationCode: 'MOB-A1-8164', 
   appName: 'Musanze Safe Market',
 };

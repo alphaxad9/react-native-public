@@ -33,7 +33,7 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <AppHeader title="Market Catalog" />
+      <AppHeader title="Market Catalog" showGroupCode={true} />
       
       <View style={styles.content}>
         {/* Search Bar */}
