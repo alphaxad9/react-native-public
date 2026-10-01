@@ -2,6 +2,7 @@
 import * as ImagePicker from 'expo-image-picker';
 import * as ImageManipulator from 'expo-image-manipulator';
 
+
 export type MediaSource = 'camera' | 'gallery';
 
 export interface MediaResult {
