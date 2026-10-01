@@ -12,6 +12,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RecordsStackParamList } from '../types/navigation';
 import { COLORS } from '../constants/colors';
 
+
 // Context & Components
 import { useInspections } from '../context/InspectionContext';
 import AppHeader from '../components/AppHeader';
@@ -69,6 +70,7 @@ export default function RecordsScreen() {
     </SafeAreaView>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {

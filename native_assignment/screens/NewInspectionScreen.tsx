@@ -9,6 +9,7 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
+
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
@@ -20,6 +21,7 @@ import { COLORS } from '../constants/colors';
 import { useInspections } from '../context/InspectionContext';
 import { validateInspectionForm, ValidationErrors } from '../validation/inspectionValidation';
 
+
 // Components
 import AppHeader from '../components/AppHeader';
 import FormInput from '../components/FormInput';
@@ -28,6 +30,7 @@ import RiskSelector from '../components/RiskSelector';
 import ConsentCheckbox from '../components/ConsentCheckbox';
 
 type NavigationProp = NativeStackNavigationProp<NewInspectionStackParamList, 'NewInspectionForm'>;
+
 
 export default function NewInspectionScreen() {
   const navigation = useNavigation<NavigationProp>();
@@ -72,6 +75,7 @@ export default function NewInspectionScreen() {
     }
   }, [vendorAlias, stallCode, category, contactNumber, riskLevel, consent, submitted]);
 
+
   const handleNext = () => {
     setSubmitted(true);
 
@@ -91,6 +95,7 @@ export default function NewInspectionScreen() {
       navigation.navigate('AddEvidence');
     }
   };
+
 
   const handleReset = () => {
     setVendorAlias('');
@@ -195,6 +200,7 @@ export default function NewInspectionScreen() {
     </SafeAreaView>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },

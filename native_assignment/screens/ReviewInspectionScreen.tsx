@@ -12,6 +12,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
+
 // Types & Constants
 import { NewInspectionStackParamList } from '../types/navigation';
 import { Inspection, Category, RiskLevel } from '../types/inspection';
@@ -145,6 +146,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     gap: 8,
   },
+  
   primaryButtonText: { 
     color: '#FFFFFF', 
     fontSize: 16, 
