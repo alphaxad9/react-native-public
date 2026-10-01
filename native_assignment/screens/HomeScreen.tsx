@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
+
 import AppHeader from '../components/AppHeader';
 import MarketCard from '../components/MarketCard';
 import EmptyState from '../components/EmptyState';
@@ -77,6 +78,7 @@ export default function HomeScreen() {
     </SafeAreaView>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },

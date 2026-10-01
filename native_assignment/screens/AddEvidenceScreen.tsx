@@ -1,5 +1,6 @@
 // native_assignment/screens/AddEvidenceScreen.tsx
 import React, { useState } from 'react';
+
 import {
   View,
   Text,
@@ -8,6 +9,7 @@ import {
   TouchableOpacity,
   ActivityIndicator,
 } from 'react-native';
+
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -16,13 +18,13 @@ import { NewInspectionStackParamList } from '../types/navigation';
 import { COLORS } from '../constants/colors';
 import { useInspections } from '../context/InspectionContext';
 
-// Services & Components
+
 import { takePhoto, chooseFromGallery } from '../services/mediaService';
 import AppHeader from '../components/AppHeader';
 import EvidencePreview from '../components/EvidencePreview';
 import EvidenceActionButtons from '../components/EvidenceActionButtons';
-
 type NavigationProp = NativeStackNavigationProp<NewInspectionStackParamList, 'AddEvidence'>;
+
 
 export default function AddEvidenceScreen() {
   const navigation = useNavigation<NavigationProp>();
@@ -31,7 +33,7 @@ export default function AddEvidenceScreen() {
   const [isLoading, setIsLoading] = useState(false);
   const [permissionError, setPermissionError] = useState<string | null>(null);
 
-  // Helper to handle media result and update draft
+  
   const handleMediaResult = async (mediaAction: () => Promise<any>) => {
     setIsLoading(true);
     setPermissionError(null);
@@ -40,7 +42,7 @@ export default function AddEvidenceScreen() {
       const result = await mediaAction();
 
       if (result.cancelled) {
-        // User cancelled gracefully, do nothing, just reset loading
+
         setIsLoading(false);
         return;
       }
